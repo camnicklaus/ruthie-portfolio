@@ -1,0 +1,21 @@
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+@import "components.css";
+
+@import "tailwindcss/utilities";
+@import "utilities.css";
+/*! purgecss start ignore */
+/* @import "ember-modal-dialog/ember-modal-structure.css"; */
+/* @import "ember-modal-dialog/ember-modal-appearance.css"; */
+/*! purgecss end ignore */
+
+.modal {
+  transition: opacity 0.25s ease;
+}
+
+body.modal-active {
+  overflow-x: hidden;
+  overflow-y: visible !important;
+}

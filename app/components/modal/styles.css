@@ -1,0 +1,11 @@
+:global .modal {
+  transition: opacity 0.25s ease;
+}
+:global body.modal-active {
+  overflow-x: hidden;
+  overflow-y: visible !important;
+}
+
+.modal-container {
+  max-height: calc(100vh - 4rem);
+}

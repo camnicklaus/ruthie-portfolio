@@ -1,0 +1,52 @@
+<Layout::Container>
+  <nav class="pt-6 flex items-center justify-between flex-wrap py-6">
+    <div class="flex items-center flex-shrink-0 text-gray-900 mr-6">
+      <img
+        class="h-12 sm:h-14 md:h-16"
+        src="https://res.cloudinary.com/camsimages/image/upload/q_auto/w_350/v1586484235/logo_eo2bow.jpg"
+        alt="Rutthie Nicklaus" />
+    </div>
+    <div class="block sm:hidden">
+      <button
+        {{on "click" (fn (toggle "isMobileMenuOpen" this))}}
+        class="flex items-center px-3 py-2 border rounded text-gray-600 border-gray-600 hover:text-gray-900 hover:border-gray-900"
+        type="button">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+
+    <div class={{if this.isMobileMenuOpen
+      "w-full block flex-grow sm:block sm:flex sm:justify-end sm:items-center sm:w-auto"
+      "w-full hidden flex-grow sm:block sm:flex sm:justify-end sm:items-center sm:w-auto"}}>
+      <div class="text-sm">
+        <a href={{href-to 'portfolio'}}
+          class={{if this.isActive.portfolio
+            "block mt-4 sm:inline-block sm:mt-0 text-gray-900 hover:text-gray-900 mr-4"
+            "block mt-4 sm:inline-block sm:mt-0 text-gray-600 hover:text-gray-900 mr-4"}}>
+          portfolio
+        </a>
+        {{!-- <a href={{href-to 'blog'}}
+          class={{if this.isActive.blog
+            "block mt-4 sm:inline-block sm:mt-0 text-gray-900 hover:text-gray-900 mr-4"
+            "block mt-4 sm:inline-block sm:mt-0 text-gray-600 hover:text-gray-900 mr-4"}}>
+          blog
+        </a> --}}
+        <a href={{href-to 'about'}}
+          class={{if this.isActive.about
+            "block mt-4 sm:inline-block sm:mt-0 text-gray-900 hover:text-gray-900 mr-4"
+            "block mt-4 sm:inline-block sm:mt-0 text-gray-600 hover:text-gray-900 mr-4"}}>
+          about
+        </a>
+        {{!-- <a href={{href-to 'contact'}}
+          class={{if this.isActive.contact
+            "block mt-4 sm:inline-block sm:mt-0 text-gray-900 hover:text-gray-900"
+            "block mt-4 sm:inline-block sm:mt-0 text-gray-600 hover:text-gray-900"}}>
+          contact
+        </a> --}}
+      </div>
+      {{!-- <div>
+        <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 sm:mt-0">Download</a>
+      </div> --}}
+    </div>
+  </nav>
+</Layout::Container>

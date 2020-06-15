@@ -1,0 +1,16 @@
+<div
+  id={{@id}}
+  class="w-full"
+  {{did-insert this.init}}
+  {{will-destroy this.removeListener}}
+>
+  {{#if this.isImageLoaded}}
+    <img
+      class="w-full"
+      src={{this.src}}
+      {{!-- loading={{@loading}} --}}
+      alt={{@alt}} />
+  {{else}}
+    <ImageWrapper::Loading @loadingHeight={{this.calculatedHeight}} />
+  {{/if}}
+</div>
